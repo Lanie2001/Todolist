@@ -8,3 +8,5 @@ global.Popper = popper // fixes some issues with Popper and Meteor
 
 import './main.html';
 import '../lib/collection.js';
+
+
