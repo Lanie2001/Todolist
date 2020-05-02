@@ -6,121 +6,93 @@
   <div class="container">
   	<div class="row justify-content-around">
   		<div class="col-9 text-center">
-  			<h1 class="display-4">Welcome to Lews InCorp. TodoList</h1>
+  			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">LewTODO</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Private Tasks</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              {{> AddaTask}}
+            </form>
+          </div>
+        </nav>
   		</div>
   	</div>
   	<div class="row my-5 justify-content-around">
-      <div class="col-3 text-center">
-
-        <div class="btn btn-info">
+      <div class="col-3 text-center">     
+        <!-- <div class="btn btn-info">
           {{> loginButtons}}
-        </div>
+        </div>  -->
       </div>
     </div>
   </div>
-  <div class="row justify-content-center">
-    <div class="col-lg">
-      {{> listing}}
-    </div>
-  </div>
-   
-</body>
 
-<template name= "listing">
-   
-      <div class="row d-flex justify-content-center containerTwo">
-        <div class="col-md-8">
-            <div class="card-hover-shadow-2x mb-3 card">
-                <div class="card-header-tab card-header">
-                    <div class="card-header-title font-size-lg text-capitalize font-weight-normal"><i class="fa fa-tasks"></i>&nbsp;Task Lists</div>
-                </div>
-                <div class="scroll-area-sm">
-                    <perfect-scrollbar class="ps-show-limits">
-                        <div style="position: static;" class="ps ps--active-y">
-                            <div class="ps-content">
-                                <ul class=" list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <div class="todo-indicator bg-warning"></div>
-                <div class="widget-content p-0">
-                    <div class="widget-content-wrapper">
-                        <div class="widget-content-left mr-2">
-                            <div class="custom-checkbox custom-control"> <input class="custom-control-input" id="exampleCustomCheckbox12" type="checkbox"><label class="custom-control-label" for="exampleCustomCheckbox12">&nbsp;</label> </div>
-                        </div>
-                        <div class="widget-content-left">
-                            <div class="widget-heading">Call Sam For payments<div class="badge badge-danger ml-2">Rejected</div>
-                            </div>
-                            <div class="widget-subheading"><i>By Bob</i></div>
-                        </div>
-                        <div class="widget-content-right"> <button class="border-0 btn-transition btn btn-outline-success"> <i class="fa fa-check"></i></button> <button class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i> </button> </div>
-                    </div>
-                </div>
-             </li>
-            
-                  <li class="list-group-item">
-                        <div class="todo-indicator bg-primary"></div>
-                        <div class="widget-content p-0">
-                            <div class="widget-content-wrapper">
-                                <div class="widget-content-left mr-2">
-                                    <div class="custom-checkbox custom-control"><input class="custom-control-input" id="exampleCustomCheckbox4" type="checkbox"><label class="custom-control-label" for="exampleCustomCheckbox4">&nbsp;</label></div>
-                                </div>
-                                <div class="widget-content-left flex2">
-                                    <div class="widget-heading">Office rent </div>
-                                    <div class="widget-subheading">By Samino!</div>
-                                </div>
-                                <div class="widget-content-right"> <button class="border-0 btn-transition btn btn-outline-success"> <i class="fa fa-check"></i></button> <button class="border-0 btn-transition btn btn-outline-danger"> <i class="fa fa-trash"></i> </button> </div>
-                             </div>
-                          </div>                 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </perfect-scrollbar>
-    </div>
 
-            <div class="d-block text-right card-footer"><button class="mr-2 btn btn-link btn-sm">Cancel</button><button class="btn btn-primary js-addTask">Add Task</button></div>
-        </div>
-    </div>
-    
- </div>
-</template>
-
-<template name="Add a Task">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="addtaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-                    <div class="input-group input-group-sm mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">Task</span>
-              </div>
-              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-            </div>
-                  <div class="input-group input-group-sm mb-3">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-sm">User Adding Task</span>
-              </div>
-              <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-            </div>
-
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary js-addsaveTask">Save changes</button>
-      </div>
+<div class="container2">
+  <div class="row">
+    <div class="col">
+      <ul class="list-group">
+  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul> 
     </div>
   </div>
 </div>
+</body>
+<template name="AddaTask">
+  <!-- Button trigger modal -->
+    <div class="col-3 float-right">
+      <a class ="navbar-brand">
+        <button type="button" class="fa fa-plus-circle btn btn-primary js-addtask" data-toggle="modal" data-target="#exampleModal">
+         Adding a Task
+        </button>
+    </a>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade" id="addtaskModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                      <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Task</span>
+                </div>
+                <input type="text" required  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+              </div>
+                    <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="inputGroup-sizing-sm">Name of User</span>
+                </div>
+                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+              </div>
+         </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary js-addsaveTask">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+

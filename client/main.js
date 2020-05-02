@@ -10,20 +10,10 @@ import './main.html';
 import '../lib/collection.js';
 import '../lib/accountUI.js';
 
-Template.listing.helpers({
-	Tasks(){
-		return listdb.find({});
-	}
-})
-	
-
 Template.AddaTask.events({
-	'click .js-addTask'(event, instance){
+	'click .js-addtask '(event, instance){	
 		$("#addtaskModal").modal("show");
-		const myId = this._id; 
-
 	}
+
+	
 })
-
-
-
