@@ -10,6 +10,15 @@ import './main.html';
 import '../lib/collection.js';
 import '../lib/accountUI.js';
 
+Template.Format.helpers({
+	Format(){
+		return listdb.find();
+	}
+
+})
+
+
+
 Template.AddaTask.events({
 	'click .js-addtask '(event, instance){	
 		$("#addtaskModal").modal("show");

@@ -25,35 +25,16 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
               {{> AddaTask}}
+              <div class="col-3 float-right"></div>
+              <button type="button" class="btn btn-dark">{{> loginButtons}}</button>  
             </form>
           </div>
         </nav>
   		</div>
   	</div>
-  	<div class="row my-5 justify-content-around">
-      <div class="col-3 text-center">     
-        <!-- <div class="btn btn-info">
-          {{> loginButtons}}
-        </div>  -->
-      </div>
-    </div>
   </div>
-
-
-<div class="container2">
-  <div class="row">
-    <div class="col">
-      <ul class="list-group">
-  <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul> 
-    </div>
-  </div>
-</div>
 </body>
+
 <template name="AddaTask">
   <!-- Button trigger modal -->
     <div class="col-3 float-right">
@@ -78,13 +59,13 @@
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroup-sizing-sm">Task</span>
                 </div>
-                <input type="text" required  class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <input type="text" required  class="form-control" id="theTask"aria-label="Small" aria-describedby="inputGroup-sizing-sm">
               </div>
                     <div class="input-group input-group-sm mb-3">
                 <div class="input-group-prepend">
                   <span class="input-group-text" id="inputGroup-sizing-sm">Name of User</span>
                 </div>
-                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                <input type="text" class="form-control" id="Username" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
               </div>
          </div>
         <div class="modal-footer">
@@ -96,3 +77,18 @@
   </div>
 </template>
 
+<template name="Format">
+  {{#each Task}}
+    <div class="row justify-content-around">
+      <div class="col-9-md">
+          <ul class="list-group js-newtask">
+      <li class="list-group-item"><input type="checkbox" aria-label="Checkbox for following text input">   Cras justo odio</li>
+     <!--  <li class="list-group-item">Dapibus ac facilisis in</li>
+      <li class="list-group-item">Morbi leo risus</li>
+      <li class="list-group-item">Porta ac consectetur ac</li>
+      <li class="list-group-item">Vestibulum at eros</li> -->
+         </ul> 
+      </div>
+    </div>
+    {{/each}}
+</template>
