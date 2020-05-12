@@ -9,8 +9,7 @@ global.Popper = popper // fixes some issues with Popper and Meteor
 //ui imports
 import './NavBar.html';
 import './layout.html';
-
-
+import './addtask.html';
 
 
 

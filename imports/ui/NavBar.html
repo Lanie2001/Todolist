@@ -1,22 +1,29 @@
 <template name= "NavBar">
 
-  <<!-- nav class="navbar navbar-expand-lg navbar-info ">
+  <!-- nav class="navbar navbar-expand-lg navbar-info ">
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> -->
       <ul class="mr-auto mt-2 nav flex-column">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#">Home <i class="fa fa-home"></i><span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#"> <button type="button" class="btn btn-dark">
+            {{> loginButtons}}</button></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          <a class="nav-link" href="#">Public Tasks <i class="fa fa-unlock-alt"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><button type="button" class="btn btn-success"><i class="fa fa-plus-square">    Add a Public Task</i> {{> AddaTask}}</button></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Personal Tasks <i class="fa fa-lock"></i></a>
         </li>
       </ul>
      
     <!-- </div> -->
   <!-- </nav> -->
-</template>
+</template> <!-- navbar-->
 
  <!-- <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
