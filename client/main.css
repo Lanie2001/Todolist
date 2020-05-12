@@ -2,14 +2,3 @@ body {
   padding: 10px;
   font-family: sans-serif;
 }
-
-
-.myImage{
-    background-position: center;
-    background-size: cover;
-    background-image: url("https://1.bp.blogspot.com/-ei_mbLB0Fpw/W1txdaEISgI/AAAAAAAABRE/oKETQMi6QQwHraduTcIXSad3Wj5yfI1KQCLcBGAs/s1600/new_logo_microsoft_02.png");
-}
-
-.container2{
-	padding-right: 75%;
-}
