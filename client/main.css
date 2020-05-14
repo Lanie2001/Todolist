@@ -1,4 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital@0;1&family=Merriweather:ital@1&display=swap');
+
+.bg-img{
+	background-image: url("https://images.unsplash.com/photo-1564890114015-e967754e2217?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80");
+	height: auto;
+	width: auto;
+}
+
 body {
   padding: 10px;
   font-family: sans-serif;
+}
+
+.big-icon{
+	font-size: 30px;
+	color: #FFE4C4;
+}
+
+#dark-bg{
+	background-color: #696969;
+	
+}
+.txt-clr{
+	color: #F0F8FF;
+}
+
+.left-Col{
+	 float: left;
+  padding: 10px;
 }
