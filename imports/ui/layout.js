@@ -8,12 +8,13 @@ global.Popper = popper // fixes some issues with Popper and Meteor
 
 //ui imports
 import './NavBar.html';
+import './mainBody.html';
 import './layout.html';
 import './addtask.html';
-
-
 
 
 // api imports
 import '../../lib/collection.js';
 import '../../lib/accountUI.js';
+import '../api/addNewTask.js';
+import '../api/mainBody.js';
