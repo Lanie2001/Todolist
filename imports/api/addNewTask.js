@@ -1,23 +1,35 @@
 Template.AddaTask.events({
 	'click .js-Task'(event, instance){
 		$('#taskModal').modal('show');
+		// if
+		// ($())
+	},
+	'click .form-check-input pub': function(event){
+		
+		console.table(event.currentTarget);
 	},
 
+	'click .form-check-input-priv': function(event){
+		console.table(event.Target);
+	},
+	
 	'click .js-saveTask'(event, instance){
-		var theUser =$('#User').val();
+		var thetasktitle =$('#taskttl').val();
 		var theTask =$('#Task').val();
-		console.log("Saving Username " + theUser);
+		console.log("Saving Title " + thetasktitle);
 		console.log("Saving New Task of " + theTask);
 		
 			listdb.insert({
-				"user": theUser,
+				"title": thetasktitle,
 				"task": theTask,
-				"createdOn": new Date().getTime(),
+				"owner": Meteor.userId(),
+				"createdOn": new Date().getTime()
 			});
 	},
 
 	'click .js-closeTaskModal'(event, instance){
-		var theUser = $("#User").val("");
+		var thetasktitle = $("#taskttl").val("");
 		var theTask = $("#Task").val("");
 	}
 });
+

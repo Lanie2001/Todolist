@@ -1,14 +1,15 @@
 <template name="MainBody">
   <div class="row">
         {{#each pbTask}}
-            <div class="col" id={{_id}}>
+            <div class="col-12" id={{_id}}>
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                  <div class="input-group-text">
-                    <input type="checkbox" aria-label="Checkbox for following text input">
+                  <div class="input-group-text mb-3">
+                    <input type="checkbox" text={{title}} aria-label="Checkbox for following text input">
+                  {{title}}
                   </div>
                 </div>
-                <input type="text" class="form-control" aria-label="Text input with checkbox">
+                <input type="text" value= {{task}} class="form-control" aria-label="Text input with checkbox">
               </div> 
             </div>
        {{/each}}  

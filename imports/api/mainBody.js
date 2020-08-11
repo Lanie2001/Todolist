@@ -3,4 +3,4 @@ Template.MainBody.helpers({
 		return listdb.find({});
 	}
 
-})
+});

@@ -1,7 +1,7 @@
 <template name= "AddaTask">
 
   <button type="button" class="btn btn-success js-Task"> 
-        <i class="fa fa-plus-square"></i>  Add a Public Task
+        <i class="fa fa-plus-square"></i>  Add a Task
   </button>
 
 <!-- Modal -->
@@ -17,9 +17,9 @@
           <div class="modal-body">
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">User</span>
+                <span class="input-group-text" id="inputGroup-sizing-default">Task Title</span>
             </div>
-              <input type="text" class="form-control" id="User" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="Enter Your Username">
+              <input type="text" class="form-control" id="taskttl" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" placeholder="The task title">
             </div>
 
               <div class="input-group mb-3">
@@ -30,6 +30,19 @@
             </div>
           </div>
           <div class="modal-footer">
+            
+            <div class="form-check">
+              <input class="form-check-input-pub" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Public
+              </label>
+            </div>
+              <div class="form-check">
+                <input class="form-check-input-priv " type="checkbox" value="" id="defaultCheck0">
+                <label class="form-check-label" for="defaultCheck1">
+                  Private
+                </label>
+              </div>
             <button type="button" class="btn btn-secondary js-closeTaskModal" data-dismiss="modal">Close</button>
            <div class="row p-1"></div>
             <button type="button" class="btn btn-primary js-saveTask">Save changes</button>
