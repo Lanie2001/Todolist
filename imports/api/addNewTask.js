@@ -1,10 +1,9 @@
 Template.AddaTask.events({
 	'click .js-Task'(event, instance){
 		$('#taskModal').modal('show');
-		// if
-		// ($())
+		
 	},
-	'click .form-check-input pub': function(event){
+	'click .form-check-input-pub': function(event){
 		
 		console.table(event.currentTarget);
 	},
