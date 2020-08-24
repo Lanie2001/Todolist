@@ -32,20 +32,21 @@
           <div class="modal-footer">
             
             <div class="form-check">
-              <input class="form-check-input-pub" type="checkbox" value="" id="defaultCheck1">
+              <input class="form-check-input-pub" type="checkbox" value="" checked="checked" id="defaultCheck1">
               <label class="form-check-label" for="defaultCheck1">
                 Public
               </label>
             </div>
+            {{#if currentUser}}
               <div class="form-check">
-                <input class="form-check-input-priv " type="checkbox" value="" id="defaultCheck0">
+                <input class="form-check-input-priv" type="checkbox" value="" id="defaultCheck0">
                 <label class="form-check-label" for="defaultCheck1">
                   Private
                 </label>
-              </div>
+              </div> {{/if}}
             <button type="button" class="btn btn-secondary js-closeTaskModal" data-dismiss="modal">Close</button>
            <div class="row p-1"></div>
-            <button type="button" class="btn btn-primary js-saveTask">Save changes</button>
+            <button type="button" class="btn btn-primary js-saveTask" data-dismiss="modal">Save changes</button>
           </div>
         </div>
       </div>

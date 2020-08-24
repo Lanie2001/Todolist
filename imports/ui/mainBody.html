@@ -5,11 +5,12 @@
               <div class="input-group mb-3">
                 <div class="input-group-prepend">
                   <div class="input-group-text mb-3">
-                    <input type="checkbox" text={{title}} aria-label="Checkbox for following text input">
+                    <input type="checkbox"  text={{title}} aria-label="Checkbox for following text input">
                   {{title}}
                   </div>
                 </div>
-                <input type="text" value= {{task}} class="form-control" aria-label="Text input with checkbox">
+                <input type="text" value= {{task}} class="{{#if TcomP}} comp {{/if}} form-control" aria-label="Text input with checkbox"> {{#if Tpub}}<i class="fa fa-unlock-alt big-icon li-color" ></i> {{else}}<i class="fa fa-lock big-icon li-color"></i> {{/if}}
+              
               </div> 
             </div>
        {{/each}}  
