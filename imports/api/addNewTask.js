@@ -3,14 +3,6 @@ Template.AddaTask.events({
 		$('#taskModal').modal('show');
 		
 	},
-	'click .form-check-input-pub': function(event){
-		
-		console.table(event.currentTarget);
-	},
-
-	'click .form-check-input-priv': function(event){
-		console.table(event.Target);
-	},
 	
 	'click .js-saveTask'(event, instance){
 		var thetasktitle =$('#taskttl').val();

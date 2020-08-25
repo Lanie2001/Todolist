@@ -19,3 +19,12 @@ Template.MainBody.helpers({
 	}
 
 });
+
+Template.MainBody.events({
+	'click .js-chkd'(event, instance){
+		var thecheckbox =$('#Checkedit').val();
+		console.log("Checked")
+	},
+	
+
+});
