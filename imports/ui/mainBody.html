@@ -6,39 +6,13 @@
                 <div class="input-group-prepend">
                   <div class="input-group-text mb-3">
                     <input type="checkbox"  class="js-chkd" text={{title}} aria-label="Checkbox for following text input"  checked="{{#if Completed}} checked {{/if}}" >
-                  {{title}}
+                    {{title}}
                   </div>
                 </div>
                 <input type="text" value= {{task}} readonly="readonly" class="{{#if Completed}} comp {{/if}} form-control" aria-label="Text input with checkbox"> {{#if Tpub}}<i class="fa fa-unlock-alt big-icon li-color" ></i> {{else}}<i class="fa fa-lock big-icon li-color"></i> {{/if}}
-                <i class="fa fa-dumpster"></i>
+                
               </div> 
             </div>
        {{/each}}  
     </div>     
 </template> 
-
-<template name= "deleteTHIS">
-  <button type="button" class="btn btn-primary js-delete" > Deleting </button>
-
-<!-- Modal -->
-<div class="modal fade" id="Confirm-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <input type= "delID" type ="text">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary js-confirm">Delete this?</button>
-      </div>
-    </div>
-  </div>
-</div>
-</template>

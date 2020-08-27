@@ -1,8 +1,17 @@
 Template.MainBody.helpers({
 	pbTask(){
 		if(Meteor.userId()){
-			return listdb.find( { $or: [ { owner: Meteor.userId()}, { privatetask: true } ] } )
-		}
+			if (Session.get("filter")=="privatetask"){
+			return listdb.find( {  owner: Meteor.userId()}, { privatetask: true } )
+				}
+				else if (Session.get("filter") == "publictask"){
+					return listdb.find({publictask})
+				}
+				else {
+					return listdb.find({ $or: [ {owner: Meteor.userId()}, {privatetask:true} ] })
+				}
+			}
+		
 		return listdb.find({publictask:true});
 		
 	},

@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.css' ;// this is the default BS theme as ex
 import popper from 'popper.js';
 global.Popper = popper // fixes some issues with Popper and Meteor
 
+Session.set("filter", "all");
+
 //ui imports
 import './NavBar.html';
 import './mainBody.html';
@@ -20,4 +22,4 @@ import '../../lib/accountUI.js';
 import '../api/addNewTask.js';
 import '../api/mainBody.js';
 import '../api/navbar.js';
-import '../api/delete.js';
+
