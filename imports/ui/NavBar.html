@@ -10,16 +10,19 @@
           <a class="nav-link" href="#"> <button type="button" class="btn btn-dark">
             {{> loginButtons}}</button></a>
         </li>
+     
         <li class="nav-item">
-          <a class="nav-link txt-clr" href="#"><i class="fa fa-unlock-alt big-icon li-color" ></i> Public Tasks</a>
-        </li>
+          <a class="nav-link txt-clr"  id="Publicly" href="#"><button class="btn btn-info js-pubtasks"><i class="fa fa-unlock-alt big-icon li-color" ></i></button> Public Tasks</a>
+        </li> 
         <li class="nav-item">
           <a class="nav-link" href="#"> {{> AddaTask}}</a>
         </li>
+        
         {{#if currentUser}}
         <li class="nav-item ">
-          <a class="nav-link txt-clr" href="#"><i class="fa fa-lock big-icon li-color"></i> Personal Tasks</a>
-        </li> {{/if}}
+          <a class="nav-link txt-clr " id="Personal" href="#"><button class="btn btn-info js-privtasks"><i class="fa fa-lock big-icon li-color "></i></button>  Personal Tasks</a>
+        </li>   
+        {{/if}}
       </ul>
 </template> 
 

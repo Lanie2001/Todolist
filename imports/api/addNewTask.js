@@ -16,7 +16,8 @@ Template.AddaTask.events({
 				"task": theTask,
 				"owner": Meteor.userId(),
 				"createdOn": new Date().getTime(),
-				"publictask": pubLIC	
+				"publictask": pubLIC,
+					
 			});
 		$("#taskttl").val("");
 		$("#Task").val("");
