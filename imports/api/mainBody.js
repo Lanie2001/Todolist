@@ -5,7 +5,7 @@ Template.MainBody.helpers({
 			return listdb.find( {  owner: Meteor.userId()}, { privatetask: true } )
 				}
 				else if (Session.get("filter") == "publictask"){
-					return listdb.find({publictask})
+					return listdb.find({publictask: true})
 				}
 				else {
 					return listdb.find({ $or: [ {owner: Meteor.userId()}, {privatetask:true} ] })
@@ -43,6 +43,23 @@ Template.MainBody.events({
 
 
 	},
-
+	'click .js-delete'(event, instance){
+		var myId = this._id;
+if ((this.owner == undefined) || (this.owner == Meteor.userId())){
+      $("#deleteId").val(myId);
+      $("#confirmModal").modal("show");
+    }
+    else {
+      alert("You don't have permission to delete that.");
+	}
+	
+	},
+	'click .js-confirm'(event, instance){
+		var myId = $("#deleteId").val();
+		
+		$("#"+myId).fadeOut('slow',function(){
+			myTasksdb.remove({_id:myId});
+		});
+	}
 
 });

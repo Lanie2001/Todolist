@@ -7,12 +7,29 @@
                   <div class="input-group-text mb-3">
                     <input type="checkbox"  class="js-chkd" text={{title}} aria-label="Checkbox for following text input"  checked="{{#if Completed}} checked {{/if}}" >
                     {{title}}
+                      {{#if currentUser}}
+                          <i class="fa fa-trash delColor js-delete"></i>
+                        {{/if}}
                   </div>
                 </div>
                 <input type="text" value= {{task}} readonly="readonly" class="{{#if Completed}} comp {{/if}} form-control" aria-label="Text input with checkbox"> {{#if Tpub}}<i class="fa fa-unlock-alt big-icon li-color" ></i> {{else}}<i class="fa fa-lock big-icon li-color"></i> {{/if}}
-                
               </div> 
-            </div>
+            </div> 
        {{/each}}  
+          <!-- Modal --> <div class="modal fade" id="confirmModal" data-backdrop="static" tabindex="-1" role="dialog"         aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="staticBackdropLabel">Are really really sure you wanna delete this?</h5>
+                </div>
+                <div class="modal-footer">
+                  <input id="deleteId" type="hidden">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                  <br>
+                  <button type="button" class="btn btn-primary js-confirm" data-dismiss="modal">Yes</button>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>     
 </template> 
